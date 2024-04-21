@@ -1,79 +1,22 @@
-// module.exports = [
-//     { name: "Divyansh", age: "22" }, { name: "vyansh", age: "23" }, { name: "Divy", age: "4" }
+// SQL statements to create user and info table
 
-// ] 
+// create database College;
+// use college;
+// create table user (name varchar(50), dob date , email varchar(250), phone int primary key, address varchar(500));
+// insert into user values('Kashish', '1990-12-10' , 'kasishagarwal@gmail.com', 9929913786, 'sodala jaipur' );
+// alter table user modify column phone bigInt;
+// select * from user;
+// create table info (rollno int primary key, semester int , marks int );
+// insert into info values(2, 8 , 92 );
+// select * from info;
 
+// CURL commands
 
+// get 
+// curl -v http://localhost:4500/user/all
+// post
+// curl -d "{\"name\":\"riya\", \"dob\":\"2023-01-01\", \"email\":\"riya@gmail\", \"phone\":9829014299, \"address\":\"kota\"}" -H "Content-Type: application/json" http://localhost:4500/user/insert
+// Put
 
-// // 1 Making a \basic server api
-
-// // const http = require('http');
-// // const data = require('./data')
-// // http.createServer((req,res)=>
-// // {
-// //     res.writeHead(200, {'contentType': 'application\json'});
-// //     res.write(JSON.stringify( data) );
-
-
-// //     res.end();
-    
-// // }).listen(3000);
-
-// //2 Creating a file in a crud Folder
-
-// const fs = require('fs');
-// const path = require('path');
-// const dirpath = path.join(__dirname, 'crud');
-// console.log(dirpath);
-// const filepath = `${dirpath}/apple.txt`;
-// fs.writeFileSync( filepath , 'This is sample file');
-
-// //3 read
-
-// fs.readFile(filepath, 'utf8', (err,item)=>{
-//     console.log(item);
-// })
-
-// //4 update
-
-// fs.appendFile(filepath, ' and name is Divyansh', (err)=>
-// {
-//     if(!err) console.log("this is updated");
-// })
-
-// //5 Rename 
-
-// fs.rename(filepath,`${dirpath}/fruit.txt`, (err)=>
-// {
-//     if (!err) console.log("file is updated")
-//     else console.log("error");
-// } )
-
-// //6 delete
-
-// fs.unlinkSync(filepath);
-
-// const express = require('express');
-// const app = express();
-// app.get('', (req,res)=>{
-//     res.send('This is divyansh');
-
-// })
-
-// app.get('/home', (req,res)=>
-// {
-//     res.send("Divyansh");
-// })
-// app.get('/home/about', (req,res)=>
-// {
-//     res.send("Div");
-// })
-
-// app.listen(3000);
-
-
-
-// con.query('select * from user', (err,result)=>
-// {
-    // console.log(result);
-// })
+// delete
+// curl -X DELETE http://localhost:4500/user/delete/98845432 
